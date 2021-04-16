@@ -1,4 +1,11 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import HelloWorld from '@/components/HelloWorld';
+ 
+export { HelloWorld };
+ 
+function install(Vue) {
+  Vue.component('HelloWorld', HelloWorld);
+}
 
-createApp(App).mount('#app')
+// Export the library as a plugin
+// @vue/component
+export default { install };
